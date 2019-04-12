@@ -169,3 +169,7 @@ def n():
 #: N806:2:26
 def e():
     return tuple(BaD for BaD in range(2))
+#: N806
+class A:
+    def test():
+        self.Bad = 1

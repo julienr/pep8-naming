@@ -456,6 +456,8 @@ def _extract_names(assignment_target):
     target_type = type(assignment_target)
     if target_type is ast.Name:
         yield assignment_target.id
+    elif target_type is ast.Attribute:
+        yield assignment_target.attr
     elif target_type in (ast.Tuple, ast.List):
         for element in assignment_target.elts:
             element_type = type(element)
